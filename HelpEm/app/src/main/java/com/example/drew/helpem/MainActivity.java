@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
+import com.parse.ParseUser;
+import com.parse.Parse;
 
 public class MainActivity extends AppCompatActivity {
     private EditText mUsername;
@@ -24,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         mSignup = (Button) findViewById(R.id.signup);
         mUsername = (EditText) findViewById(R.id.username);
         mPassword = (EditText) findViewById(R.id.password);
+
+        // Enable Local Datastore.
+        Parse.enableLocalDatastore(this);
+
+        Parse.initialize(this, "PqeydcZKCSCFJ0xv7hH73Xhj8IADhcLDAG7xy86X", "fM997mcX0wnz4Y7p0kM2pzMFBjETI0DRG5mDiTBJ");
 
         mSignup.setOnClickListener(new View.OnClickListener() {
             @Override
