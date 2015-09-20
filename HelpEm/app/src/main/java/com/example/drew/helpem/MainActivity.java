@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mLogin;
     private Button mSignup;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         mSignup = (Button) findViewById(R.id.signup);
         mUsername = (EditText) findViewById(R.id.username);
         mPassword = (EditText) findViewById(R.id.password);
+
 
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
